@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DiscordBot.Storage.Impl;
+using System;
 
 namespace DiscordBot
 {
@@ -6,7 +7,14 @@ namespace DiscordBot
     {
         static void Main()
         {
+         
+
+            Unity.RegiterTypes();
+
             Console.WriteLine("Hello World!");
+
         }
     }
+
+
 }

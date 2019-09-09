@@ -4,16 +4,34 @@ using System.Text;
 
 namespace DiscordBot.Storage.Impl
 {
+
     class InMemoryStorage : IDataStorage
     {
-        public T RestoreObject<T>(string key)
+        
+
+
+        private readonly Dictionary<string, object> _dictionary = new Dictionary<string, object>();
+
+        public InMemoryStorage()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("sss");
+            //this.dictionary = _dictionary;
         }
 
         public void StoreObject(object obj, string key)
         {
-            throw new NotImplementedException();
+            if (_dictionary.ContainsKey(key)) return;
+            _dictionary.Add(key, obj);
         }
+
+        public T RestoreObject<T>(string key)
+        {
+            if (!_dictionary.ContainsKey(key))
+                throw new ArgumentException($"Key provided {key} wasn't found");
+            return (T)_dictionary[key];
+
+        }
+
+  
     }
 }

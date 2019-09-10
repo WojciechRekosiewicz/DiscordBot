@@ -7,16 +7,16 @@ namespace DiscordBot.Storage.Impl
 
     class InMemoryStorage : IDataStorage
     {
-        
+
 
 
         private readonly Dictionary<string, object> _dictionary = new Dictionary<string, object>();
 
-        public InMemoryStorage()
-        {
-            Console.WriteLine("sss");
-            //this.dictionary = _dictionary;
-        }
+        //public InMemoryStorage()
+        //{
+        //    Console.WriteLine("sss");
+        //    //this.dictionary = _dictionary;
+        //}
 
         public void StoreObject(object obj, string key)
         {

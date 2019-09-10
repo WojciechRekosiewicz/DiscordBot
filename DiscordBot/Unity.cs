@@ -6,6 +6,7 @@ using System.Text;
 using Unity;
 using Unity.Resolution;
 using System.Diagnostics.Contracts;
+using Unity.Lifetime;
 
 namespace DiscordBot
 {
@@ -28,8 +29,12 @@ namespace DiscordBot
         public static void RegiterTypes()
         {
             _container = new UnityContainer();
-            _container.RegisterType<IDataStorage, InMemoryStorage>();
-           
+
+            //only one instance will be created because of this
+            // ContainerControlledLifetimeManager
+             _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
+     
+
         }
 
 

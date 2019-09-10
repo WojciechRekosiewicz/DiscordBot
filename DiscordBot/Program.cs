@@ -7,14 +7,15 @@ namespace DiscordBot
     {
         static void Main()
         {
-         
-
+        
             Unity.RegiterTypes();
+            
+            Console.WriteLine("HW!");
 
-            Console.WriteLine("Hello World!");
-
+         
         }
     }
+
 
 
 }

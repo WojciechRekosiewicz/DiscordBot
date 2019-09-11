@@ -2,6 +2,8 @@
 using System;
 using Discord.WebSocket;
 using System.Threading.Tasks;
+using DiscordBot.Discord.Entities;
+using DiscordBot.Discord;
 
 namespace DiscordBot
 {
@@ -9,17 +11,22 @@ namespace DiscordBot
     {
         static void Main()
         {
-        
+    
             Unity.RegiterTypes();
+            Console.WriteLine("HW!");
 
+            //var config = new DiscordSocketConfig
+            //{
+            //    AlwaysDownloadUsers = true            
+            //};
+            //var client = new DiscordSocketClient(config);
 
-            var config = new DiscordSocketConfig
+            var a = new DiscordBotConfig()
             {
-                AlwaysDownloadUsers = true
+                Token = "ABC",
+                SocketConfig = SocketConfig.GetDefault()
 
             };
-            var client = new DiscordSocketClient(config);
-            Console.WriteLine("HW!");
 
 
 

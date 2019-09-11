@@ -13,15 +13,9 @@ namespace DiscordBot
         {
     
             Unity.RegiterTypes();
-            Console.WriteLine("HW!");
+           
 
-            //var config = new DiscordSocketConfig
-            //{
-            //    AlwaysDownloadUsers = true            
-            //};
-            //var client = new DiscordSocketClient(config);
-
-            var a = new DiscordBotConfig()
+            var botDiscordConfig = new DiscordBotConfig()
             {
                 Token = "ABC",
                 SocketConfig = SocketConfig.GetDefault()

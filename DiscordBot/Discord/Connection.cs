@@ -11,19 +11,19 @@ namespace DiscordBot.Discord
     public class Connection
     {
 
-        private DiscordSocketClient _client;
-        private DiscordLogger _logger;
+        private readonly DiscordSocketClient _client;
+        private readonly DiscordLogger _logger;
 
-        public Connection(DiscordLogger logger)
+        public Connection(DiscordLogger logger, DiscordSocketClient client)
         {
             _logger = logger;
+            _client = client;
+        
 
         }
 
         internal async Task ConnectAsync(DiscordBotConfig config)
-        {
-            _client = new DiscordSocketClient(config.SocketConfig);
-           
+        {    
             _client.Log += _logger.Log;                                    
         }
     }

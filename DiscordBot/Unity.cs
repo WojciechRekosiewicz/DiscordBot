@@ -49,8 +49,7 @@ namespace DiscordBot
 
         public static T Resolve<T>()
         {
-            return Container.Resolve<T>();
-
+            return Container.Resolve<T>();            
         }
 
 

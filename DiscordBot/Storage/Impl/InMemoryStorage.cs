@@ -28,6 +28,7 @@ namespace DiscordBot.Storage.Impl
         {
             if (!_dictionary.ContainsKey(key))
                 throw new ArgumentException($"Key provided {key} wasn't found");
+
             return (T)_dictionary[key];
 
         }

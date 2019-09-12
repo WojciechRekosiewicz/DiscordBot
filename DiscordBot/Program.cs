@@ -13,8 +13,8 @@ namespace DiscordBot
 
             var botDiscordConfig = new DiscordBotConfig()
             {
-                Token = "ABC",
-                SocketConfig = SocketConfig.GetDefault()
+                Token = "ABC"
+                //SocketConfig = SocketConfig.GetDefault()
 
             };
 

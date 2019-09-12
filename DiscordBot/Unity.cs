@@ -32,10 +32,16 @@ namespace DiscordBot
 
             //only one instance will be created because of this
             // ContainerControlledLifetimeManager
-             _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
-            _container.RegisterType<ILogger, Logger>(new ContainerControlledLifetimeManager());
-            _container.RegisterType<Discord.Connection>(new ContainerControlledLifetimeManager());
-        }
+            //_container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
+            //_container.RegisterType<ILogger, Logger>(new ContainerControlledLifetimeManager());
+            //    _container.RegisterType<Discord.Connection>(new ContainerControlledLifetimeManager());
+
+            _container.RegisterSingleton<IDataStorage, InMemoryStorage>();
+            _container.RegisterSingleton<ILogger, Logger>();
+            _container.RegisterSingleton<Discord.Connection>();
+
+
+         }
 
 
 

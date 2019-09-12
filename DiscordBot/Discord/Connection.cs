@@ -24,7 +24,12 @@ namespace DiscordBot.Discord
 
         internal async Task ConnectAsync(DiscordBotConfig config)
         {    
-            _client.Log += _logger.Log;                                    
+            _client.Log += _logger.Log;
+
+            await _client.LoginAsync(TokenType.Bot, config.Token);
+            await _client.StartAsync();
+
+            await Task.Delay(-1);
         }
     }
 }

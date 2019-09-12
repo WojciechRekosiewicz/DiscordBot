@@ -13,11 +13,11 @@ namespace DiscordBot
             Unity.RegiterTypes();
            
             var storage = Unity.Resolve<IDataStorage>();
-
+   
             var connection = Unity.Resolve<Connection>();
             await connection.ConnectAsync(new DiscordBotConfig
             {
-                Token = storage.RestoreObject<string>("Bot")
+                Token = storage.RestoreObject<string>("Config/BotToken")
                 //SocketConfig = SocketConfig.GetDefault()
 
             });

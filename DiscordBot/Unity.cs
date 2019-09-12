@@ -40,7 +40,7 @@ namespace DiscordBot
             //_container.RegisterType<ILogger, Logger>(new ContainerControlledLifetimeManager());
             //    _container.RegisterType<Discord.Connection>(new ContainerControlledLifetimeManager());
 
-            _container.RegisterSingleton<IDataStorage, InMemoryStorage>();
+            _container.RegisterSingleton<IDataStorage, JsonStorage>();
             _container.RegisterSingleton<ILogger, Logger>();
             _container.RegisterType<DiscordSocketConfig>(new InjectionFactory(i => SocketConfig.GetDefault()));
             _container.RegisterSingleton<DiscordSocketClient>(new InjectionConstructor(typeof(DiscordSocketConfig)));

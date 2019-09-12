@@ -1,11 +1,13 @@
-﻿using DiscordBot.Discord.Entities;
+﻿using System;
+using DiscordBot.Discord.Entities;
 using DiscordBot.Discord;
+using System.Threading.Tasks;
 
 namespace DiscordBot
 {
-     class Program
+     internal class Program
     {
-        static void Main()
+        private static async Task Main()
         {
     
             Unity.RegiterTypes();
@@ -19,14 +21,12 @@ namespace DiscordBot
             };
 
             var connection = Unity.Resolve<Connection>();
+            await connection.ConnectAsync(botDiscordConfig);
 
-
+            Console.ReadKey();
 
 
 
         }
     }
-
-
-
 }

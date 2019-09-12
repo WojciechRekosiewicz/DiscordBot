@@ -26,6 +26,7 @@ namespace DiscordBot
             }
         }
 
+
         public static void RegiterTypes()
         {
             _container = new UnityContainer();
@@ -47,19 +48,19 @@ namespace DiscordBot
 
 
 
+        //public static T Resolve<T>()
+        //{
+        //    return Container.Resolve<T>();
+        //}
+
+
+
+
+
         public static T Resolve<T>()
         {
-            return Container.Resolve<T>();            
+            return (T)Container.Resolve(typeof(T), string.Empty, new CompositeResolverOverride());
         }
-
-
-
-
-
-        //internal static T Resolve<T>()
-        //{
-        //    return (T)Container.Resolve(typeof(T), string.Empty, new CompositeResolverOverride());
-        //}
 
         //public static T Resolve<T>()
         //{

@@ -22,7 +22,10 @@ namespace DiscordBot
 
             };
 
-            
+            var connection = Unity.Resolve<Connection>();
+
+
+
 
 
         }

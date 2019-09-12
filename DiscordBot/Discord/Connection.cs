@@ -17,14 +17,12 @@ namespace DiscordBot.Discord
         {
             _client = new DiscordSocketClient(config.SocketConfig);
 
-            _client.Log += Log;
+            var a = new DiscordLogger();
+
+
+            _client.Log += a.Log;
                        
              
-        }
-
-        private Task Log(LogMessage arg)
-        {
-            throw new NotImplementedException();
         }
     }
 }

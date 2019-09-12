@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DiscordBot.Discord
+namespace DiscordBot
 {
-    class Logger
+    public interface ILogger
     {
     }
 }

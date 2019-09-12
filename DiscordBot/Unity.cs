@@ -33,7 +33,7 @@ namespace DiscordBot
             //only one instance will be created because of this
             // ContainerControlledLifetimeManager
              _container.RegisterType<IDataStorage, InMemoryStorage>(new ContainerControlledLifetimeManager());
-     
+            _container.RegisterType<Logger>(new ContainerControlledLifetimeManager());
 
         }
 
@@ -46,6 +46,9 @@ namespace DiscordBot
             return Container.Resolve<T>();
 
         }
+
+
+
 
 
         //internal static T Resolve<T>()

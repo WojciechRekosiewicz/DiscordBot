@@ -4,13 +4,12 @@ using System.Text;
 
 namespace DiscordBot
 {
-    class Logger
+    class Logger : ILogger
     {
-        public void Log(string message, ConsoleColor color = ConsoleColor.White)
+        public void Log(string message)
         {
-            Console.ForegroundColor = color;
             Console.WriteLine(message);
-            Console.ResetColor();
         }
+
     }
 }

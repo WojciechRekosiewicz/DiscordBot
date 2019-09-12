@@ -12,16 +12,15 @@ namespace DiscordBot
     
             Unity.RegiterTypes();
            
-
-            var botDiscordConfig = new DiscordBotConfig()
-            {
-                Token = "ABC"
-                //SocketConfig = SocketConfig.GetDefault()
-
-            };
+            var storage = Unity.Resolve<IDataStorage>();
 
             var connection = Unity.Resolve<Connection>();
-            await connection.ConnectAsync(botDiscordConfig);
+            await connection.ConnectAsync(new DiscordBotConfig
+            {
+                Token = storage.RestoreObject<string>("Bot")
+                //SocketConfig = SocketConfig.GetDefault()
+
+            });
 
             Console.ReadKey();
 

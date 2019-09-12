@@ -44,8 +44,10 @@ namespace DiscordBot
 
          }
 
-
-
+        public static T Resolve<T>()
+        {
+            return (T)Container.Resolve(typeof(T), string.Empty, new CompositeResolverOverride());
+        }
 
 
         //public static T Resolve<T>()
@@ -53,20 +55,6 @@ namespace DiscordBot
         //    return Container.Resolve<T>();
         //}
 
-
-
-
-
-        public static T Resolve<T>()
-        {
-            return (T)Container.Resolve(typeof(T), string.Empty, new CompositeResolverOverride());
-        }
-
-        //public static T Resolve<T>()
-        //{
-        //    return (T)Container.Resolve(typeof(T), string.Empty, new ResolverOverride());
-
-        //}
     }
 
 

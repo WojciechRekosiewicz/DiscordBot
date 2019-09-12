@@ -1,8 +1,4 @@
-﻿using DiscordBot.Storage.Impl;
-using System;
-using Discord.WebSocket;
-using System.Threading.Tasks;
-using DiscordBot.Discord.Entities;
+﻿using DiscordBot.Discord.Entities;
 using DiscordBot.Discord;
 
 namespace DiscordBot

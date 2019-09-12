@@ -7,6 +7,9 @@ using Unity;
 using Unity.Resolution;
 using System.Diagnostics.Contracts;
 using Unity.Lifetime;
+using Discord.WebSocket;
+using Unity.Injection;
+using DiscordBot.Discord;
 
 namespace DiscordBot
 {
@@ -39,6 +42,7 @@ namespace DiscordBot
 
             _container.RegisterSingleton<IDataStorage, InMemoryStorage>();
             _container.RegisterSingleton<ILogger, Logger>();
+            _container.RegisterType<DiscordSocketConfig>(new InjectionFactory(i => SocketConfig.GetDefault()));
             _container.RegisterSingleton<Discord.Connection>();
 
 

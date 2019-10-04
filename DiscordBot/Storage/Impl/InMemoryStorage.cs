@@ -5,7 +5,7 @@ using System.Text;
 namespace DiscordBot.Storage.Impl
 {
 
-    class InMemoryStorage : IDataStorage
+    public class InMemoryStorage : IDataStorage
     {
 
 

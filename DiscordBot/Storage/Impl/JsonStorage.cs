@@ -7,7 +7,7 @@ using static System.IO.Directory;
 
 namespace DiscordBot.Storage.Impl
 {
-    class JsonStorage : IDataStorage
+    public class JsonStorage : IDataStorage
     {
         public T RestoreObject<T>(string key)
         {

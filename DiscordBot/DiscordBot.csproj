@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <PackageReference Include="Discord.Net" Version="2.1.1" />
+    <PackageReference Include="OpenCover" Version="4.7.922" />
     <PackageReference Include="Unity" Version="5.8.6" />
   </ItemGroup>
 

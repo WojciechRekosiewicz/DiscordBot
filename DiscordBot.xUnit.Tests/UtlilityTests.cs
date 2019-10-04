@@ -1,4 +1,5 @@
 ﻿using Xunit;
+using DiscordBot;
 
 namespace DiscordBot.xUnit.Tests
 {
@@ -8,7 +9,8 @@ namespace DiscordBot.xUnit.Tests
         public void MyFirstTest()
         {
 
-
+            const int expected = 5;
+            var actual = Utilities.MyUtility();
         }
     }
 }
